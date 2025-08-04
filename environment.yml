@@ -1,0 +1,38 @@
+name: single_cell_genomics_pipeline
+
+channels:
+  - conda-forge
+  - bioconda
+  - r
+  - defaults
+
+dependencies:
+  - python=3.9
+  
+  # Core bioinformatics tools
+  - snippy=4.6.0
+  - snp-sites=2.5.1
+  
+  # R environment and packages
+  - r-base=4.3.*
+  - r-tidyverse=2.0.*
+  - r-changepoint=2.2.*
+  - r-ggplot2=3.4.*
+  - r-gridextra=2.3.*
+  - r-viridis=0.6.*
+  - r-scales=1.2.*
+  
+  # Python packages via conda
+  - pandas=2.0.*
+  - biopython=1.81
+  - numpy=1.24.*
+  
+  # Optional: ANI analysis tool
+  - fastani=1.33
+  
+  # Development and utility tools
+  - pip
+  
+  - pip:
+    # Additional Python packages not available via conda
+    - pyorthoani>=1.0.0
